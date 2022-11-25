@@ -1,0 +1,124 @@
+1.npm init
+2.npm i express
+3.npm i mongoose
+4.install (Thunder Client Extention) in VS code.
+5.create (index.js) file.
+6.create (db.js) file.
+7.npm i -D nodemon
+8.create (models) folder.
+9.create (routes) folder.
+10.
+-----------------------------------------------
+Mongodb Database Codes.
+1= view all database?
+Ans= (show dbs)
+2= Create a new or switch databases?
+Ans= (use dbName)
+3= View Current Database?
+Ans= (db)
+4= Delete Database?
+Ans= db.dropDatabase() 
+
+----------------------------------------------------
+Mongodb Collections Codes
+1= view all Collections?
+Ans= show collections
+2= Create a collection named 'anyname'
+Ans= db.createCollection('anyname')
+3= Delete collections?
+Ans= db.anyname.drop()
+----------------------------------------------------
+Mongodb Rows Codes
+1= Insert one Row?
+Ans= db.collectionName.insert({
+	'name': 'faisal',
+	'lang': 'JavaScript',
+	'member_since': 5
+})
+
+2= Insert many rows?
+Ans= db.collectionName.insertMany([{
+	'name': 'faisal',
+	'lang': 'JavaScript',
+	'member_since': 5
+	},
+	'name': 'Hasnain',
+	'lang': 'Java',
+	'member_since': 2
+	},
+	'name': 'Usama',
+	'lang': 'Python',
+	'member_since': 4
+}]) 
+
+3= Show all rows in the Collections?
+Ans= db.CollectionName.find()
+
+4= Find the first row matching the object
+Ans= db.CollectionName.findOne({name:"faisal"})
+
+5= All collection makes pretty?
+Ans= db.collectionName.find().pretty()
+
+6= in collection show how many rows to show?
+Ans= db.collectionName.find().pretty().limit(2)
+
+7= Count the number of rows in the output
+Ans= db.collectionName.find().count() 
+----------------------------------------------
+Search in a mongodb database?
+Ans= db.collectionName.find({lang: 'Python'})
+
+how many faisal collections show 
+Ans= db.collectionName.find({name:'faisal'}).count()
+
+how many faisal collections show with sort 1 by 1 
+Ans= db.collectionName.find().sort({name:'faisal'}).pretty()
+
+--------------------------------------------------------------
+Update a row
+db.collectionName.update({name: 'faisal'},{name: "khokhar"})
+
+Update a row if obj not here then its create new on
+db.collectionName.update({name: 'faisal'},{name: "khokhar"},{upsert:true})
+
+Delete Row
+db.collectionName.remove({name:'faisal'})
+
+--------------------------------------------------------------------------
+
+Less than/Greater than/ Less than or Eq/Greater than or Eq
+db.comments.find({member_since: {$lt: 90}})
+db.comments.find({member_since: {$lte: 90}})
+db.comments.find({member_since: {$gt: 90}})
+db.comments.find({member_since: {$gte: 90}})
+
+------------------------------------------------------------------------
+Q. For clean all screen
+A. cls
+
+------------------------------------------------------------------------
+Q. in powerShell Code start mongo?
+A. open power shell and type   mongod,
+A2. open other powershell and type  mongo, and type commands.
+------------------------------------------------------------------------
+A. in cmd type   mongo   and type codes commands.
+------------------------------------------------------------------------
+Q. for check version?
+A. mongo --version
+------------------------------------------------------------------------
+For fetching notes ets,we use 4 tabs:
+1: https://express-validator.github.io/docs/
+2: https://www.npmjs.com/package/bcryptjs
+3: https://www.npmjs.com/package/jsonwebtoken
+4: https://jwt.io/
+
+
+
+
+
+
+
+
+
+
